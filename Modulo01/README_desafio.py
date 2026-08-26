@@ -1,88 +1,61 @@
 # 🍞 Sistema de Vendas - Padaria (CLI)
 
-> Um sistema interativo desenvolvido em Python com interface de Linha de Comando (CLI) para gerenciamento de estoque, cadastro e vendas de produtos de uma padaria.
+## 📌 Visão Geral e Histórias de Usuário (User Stories)
 
----
+O ** Sistema de Vendas da Padaria** é uma aplicação interativa via linha de comando (CLI - *Command Line Interface*), desenvolvida em Python para gerenciar a comercialização de produtos, controle de estoque e atendimento ao cliente de forma direta no terminal.
 
-## 📋 Visão Geral do Projeto
-
-Este projeto foi desenvolvido com o objetivo de criar uma solução prática e eficiente para o gerenciamento de uma padaria, permitindo que o negócio controle seus produtos e realize vendas de forma automatizada pelo terminal.
-
-### 👥 Visão dos Stakeholders e Personas (User Stories)
-
-* *PD (Product Owner / Dono do Negócio):*
-> "Eu quero criar um sistema de vendas para a padaria, para que os clientes possam comprar nossos produtos online e para que eu consiga controlar as vendas e os produtos disponíveis."
-
-
-* *QA (Qualidade / Cliente):*
-> "Eu quero poder ter facilidade para comprar os produtos da padaria online, para que eu possa economizar tempo e evitar filas."
-
-
-* *Tech (Programador / Aprendizado):*
-> "Eu quero criar um sistema de vendas para que eu possa desenvolver minhas habilidades de programação e criar um projeto útil para a padaria."
-
-
-* *Dev (Desenvolvedor Backend):*
-> "Eu quero um sistema de vendas para a padaria para que eu possa implementar as funcionalidades necessárias, como cadastro de produtos, gerenciamento de estoque e processamento de pedidos, utilizando as melhores práticas de desenvolvimento de software."
-
-
-* *UX (Designer de Experiência do Usuário):*
-> "Eu quero um sistema de vendas para a padaria para que eu possa criar uma interface intuitiva e agradável para os clientes, facilitando a navegação e a realização de compras online."
-
-
-* *IA (Análise de Dados):*
-> "Eu quero um sistema de vendas para a padaria para que eu possa coletar e analisar os dados de vendas, identificar padrões de compra e fornecer insights para melhorar as estratégias de marketing e vendas da padaria."
-
-
-
----
-
-## ⚙️ Arquitetura e Especificações Técnicas
-
-* *Tipo de Aplicação:* Sistema *CLI (Command Line Interface)* — roda inteiramente via terminal, sem necessidade de interface gráfica complexa.
-* *Linguagem:* Python 3
-* *Estrutura de Dados:* Armazenamento estático baseado em vagas de memória dedicadas para gerenciar até 5 produtos iniciais e dinâmicos (p1_nome, p2_nome, etc.).
+### Visões dos Envolvidos:
+- **PD (Dono do Negócio):** Deseja um sistema de vendas eficiente para a padaria, permitindo o controle de vendas e monitoramento dos produtos disponíveis.
+- **QA (Cliente):** Busca facilidade e rapidez no processo de compra e suporte, economizando tempo e evitando filas.
+- **Tech / Dev (Programador):** Implementação de funcionalidades essenciais (cadastro, busca, vendas, cancelamento e estoque) seguindo boas práticas de desenvolvimento de software.
+- **UX (Designer de Experiência):** Foco em um menu de navegação intuitivo, claro e agradável no terminal.
+- **IA (Análise de Dados):** Estrutura preparada para registro de transações que permitam a análise futura de padrões de consumo e faturamento.
 
 ---
 
 ## 🚀 Funcionalidades Principais
 
-O sistema conta com um menu interativo completo acessível via terminal (0 a 9):
-
-1. *Cadastrar Produto:* Permite registrar novos itens informando nome, descrição, validade, estoque e preço.
-2. *Listar Produtos:* Exibe todos os produtos cadastrados no sistema com detalhes de preço, estoque e validade.
-3. *Excluir Produto:* Remove um produto do estoque liberando sua respectiva vaga no sistema.
-4. *Pesquisar Produto:* Realiza buscas rápidas por nome para verificar a disponibilidade e detalhes no estoque.
-5. *Realizar Venda:* Processa a venda de produtos, abatendo automaticamente o estoque e calculando o valor total.
-6. *Suporte ao Cliente (SAC):* Exibe os canais de atendimento e centrais de ajuda da padaria.
-7. *Cancelar Venda (Estorno):* Permite estornar a última venda realizada, devolvendo os itens ao estoque.
-8. *Relatório Técnico / Caixa:* Mostra o total de itens gerais em estoque e a última movimentação financeira.
-9. *Informações do Desenvolvedor:* Exibe os dados sobre a versão e arquitetura do sistema.
-10. *Sair:* Encerra a execução do programa.
+- **1. Cadastrar Produto:** Permite o cadastro de novos produtos (Nome, Descrição, Validade, Estoque e Preço) nas vagas disponíveis.
+- **2. Listar Produtos:** Exibe todos os produtos atualmente cadastrados no estoque com suas respectivas informações detalhadas.
+- **3. Excluir Produto:** Remove um produto do sistema filtrando pelo nome e liberando sua vaga.
+- **4. Pesquisar Produto:** Consulta rápida da existência, localização e quantidade de um produto específico no estoque.
+- **5. Realizar Venda:** Registra a venda de itens, calcula o valor total da compra e atualiza automaticamente o estoque disponível.
+- **6. Suporte ao Cliente:** Canal integrado de atendimento com opções de central de ajuda, chat ao vivo e formulário de envio de mensagens.
+- **7. Cancelar Venda:** Permite o estorno de vendas e devolve a quantidade especificada de itens de volta ao estoque.
+- **0. Sair:** Encerra a execução do sistema com segurança.
 
 ---
 
-## 🛠️ Como Executar o Projeto
+## 🛠️ Tecnologias e Estruturas Utilizadas
 
-1. Certifique-se de ter o *Python 3* instalado em sua máquina.
-2. Baixe ou copie o código fonte principal do sistema (ex: padaria.py).
-3. Abra o terminal (Prompt de Comando, PowerShell ou Terminal do Linux/macOS) na pasta onde o arquivo está salvo.
+### Linguagem
+- **Python 3**
+
+### Interface
+- **CLI (Command Line Interface):** Execução 100% via terminal, sem dependência de bibliotecas de interface gráfica.
+
+### Estruturas de Programação Utilizadas
+- **Laços de Repetição (`while True`):** Mantém o menu principal ativo em loop até que o usuário escolha a opção de sair.
+- **Estruturas Condicionais (`if`, `elif`, `else`):** Gerenciamento do fluxo de opções do menu e validação das regras de negócio (ex.: estoque insuficiente, vagas cheias, produto não encontrado).
+- **Variáveis Locais e De Controle:** Armazenamento individual dos atributos de cada vaga de produto (`p1`, `p2`, `p3`).
+- **Formatação de String e Emojis:** Uso de *f-strings* e formatação de valores monetários (`R$ {:.2f}`) para uma melhor legibilidade no terminal.
+- **Tratamento de Strings (`.lower()`):** Garantia de busca e comparação de nomes sem sensibilidade a maiúsculas/minúsculas.
+
+---
+
+## 📋 Panorama Geral: O Sistema de Pedidos da Padaria
+
+O **Sistema de Vendas da Padaria** foi projetado para resolver a necessidade de controle operacional básico de uma padaria de pequeno/médio porte de forma leve e rápida. 
+
+Por ser um aplicativo CLI, não exige instalação de dependências pesadas ou ambientes gráficos complexos. O menu interativo orienta o atendente ou cliente em cada passo, permitindo realizar transações rapidamente, consultar preços, gerenciar a reposição e estornos de produtos e acessar canais de suporte em poucos comandos.
+
+---
+
+## 💻 Como Executar o Projeto
+
+1. Certifique-se de ter o **Python 3** instalado em sua máquina.
+2. Baixe ou copie o código do arquivo `main.py` (ou `padaria.py`).
+3. Abra o seu terminal/prompt de comando no diretório do arquivo.
 4. Execute o comando:
-bash
-python padaria.py
-
-
-
-
-
----
-
-## 📦 Produtos Pré-Cadastrados no Sistema
-
-O sistema já inicializa com alguns itens padrão para teste imediato:
-
-* *Pão Francês* (R$ 1,50)
-* *Croissant* de queijo (R$ 8,00)
-* *Sonho* recheado com creme (R$ 6,00)
-* *Café* Expresso 300ml (R$ 10,00)
-* *Suco de Laranja* natural 300ml (R$ 10,00)
+   ```bash
+   python main.py
