@@ -1,4 +1,5 @@
 import datetime
+'''importa o modulo do python usado para trabalhar '''
 
 print("--- Calculadora de Dias de Vida e Idade ---\n")
 
