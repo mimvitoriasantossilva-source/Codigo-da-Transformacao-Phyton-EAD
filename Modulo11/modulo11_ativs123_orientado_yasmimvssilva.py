@@ -1,17 +1,12 @@
 import os
 import sqlite3
 
-# ==============================================================================
-# CONFIGURAÇÃO DO DIRETÓRIO E BANCO DE DADOS
-# ==============================================================================
 PASTA_DESTINO = "modulo11"
 NOME_BANCO = "exercicio_guiado.db"
 
-# Cria a pasta 'modulo11' se ela ainda não existir no projeto
 if not os.path.exists(PASTA_DESTINO):
     os.makedirs(PASTA_DESTINO)
 
-# Define o caminho completo: modulo11/exercicio_guiado.db
 CAMINHO_BANCO = os.path.join(PASTA_DESTINO, NOME_BANCO)
 
 
@@ -34,9 +29,6 @@ def pausar():
     input("\n▶ Pressione ENTER para continuar para o próximo passo...")
 
 
-# ==============================================================================
-# PASSO 1: Criar a Tabela
-# ==============================================================================
 def passo_1_criar_tabela():
     mensagem_orientacao(
         "Passo 1: Criando o Banco de Dados na pasta 'modulo11'",
@@ -63,9 +55,6 @@ def passo_1_criar_tabela():
     pausar()
 
 
-# ==============================================================================
-# PASSO 2: Operações CRUD Interativas
-# ==============================================================================
 def passo_2_crud_inserir():
     mensagem_orientacao(
         "Passo 2.1: Operação CREATE (Inserir Clientes)",
